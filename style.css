@@ -399,6 +399,9 @@ main {
     .main-menu li {
         margin-right: 20px;
     }
+    .btn {
+        width: inherit;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -471,5 +474,12 @@ main {
     }
     .table-container > table {
         width: 600px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .banner-content__title {
+        font-size: 39px;
+        line-height: 63px;
     }
 }
