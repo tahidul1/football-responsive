@@ -85,6 +85,8 @@ main {
     max-width: 1050px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .row {
@@ -100,6 +102,7 @@ main {
 .btn {
     display: flex;
     color: #fff;
+    font-weight: 500;
     padding: 10px 24px;
     width: 123px;
     background: #E02C6D;
@@ -114,6 +117,21 @@ main {
 
 .btn--arrow i{
     margin-left: 8px;
+}
+
+.section-heading {
+    margin-bottom: 34px;
+}
+
+.border-right {
+    border-right: 1px solid #969BAB;
+}
+.border-left {
+    border-left: 1px solid #969BAB;
+}
+
+.d-none {
+    display: none;
 }
 
 /* -------------------------------------------------------------------------
@@ -146,6 +164,7 @@ main {
 
 .main-menu li a {
     color: #fff;
+    font-weight: 400;
     line-height: 24px;
     display: inline-block;
 }
@@ -155,6 +174,12 @@ main {
     transition: 0.3s ease-in;
 }
 
+.menu-bar i {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
 .menu-area .btn i {
     margin-right: 8px;
 }
@@ -162,7 +187,6 @@ main {
 /* -------------------------------------------------------------------------
                                 banner area css 
 ---------------------------------------------------------------------------- */
-
 .banner-area {
     background: #2D25A0;
     padding-top: 135px;
@@ -190,6 +214,19 @@ main {
     display: flex;
     object-fit: contain;
     height: 100%;
+    animation: swing ease-in-out 4s infinite alternate;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(-2deg);
+    }
+    50%{
+        transform: rotate(2deg);
+    }
+    100%{
+        transform: rotate(-2deg);
+    }
 }
 
 /* -------------------------------------------------------------------------
@@ -254,9 +291,63 @@ main {
 }
 
 /* -------------------------------------------------------------------------
+                                video area css 
+---------------------------------------------------------------------------- */
+.video-area{
+    width: 100%;
+    margin: 20px 0 80px;
+}
+
+.video {
+    width: 100%;
+}
+
+.video iframe {
+    width: 100%;
+    height: 470px;
+}
+
+/* -------------------------------------------------------------------------
+                                match schedule area css 
+---------------------------------------------------------------------------- */
+.match-schedule {
+    width: 100%;
+    margin: 0px 0 40px;
+}
+
+.table-container > table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f8f9fa;
+    box-shadow: 0px 0px 4px 0px #ccc;
+}
+
+.table-container > table tr {
+    border-bottom: 1px solid #969BAB;
+}
+
+.table-container > table tr:last-child {
+    border-bottom: none;
+}
+
+.table-container > table div {
+    padding: 25px;
+}
+
+.table-container > table div:hover {
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3 ease-in;
+}
+
+.table-container > table div table {
+    width: 100%;
+}
+
+
+/* -------------------------------------------------------------------------
                                 footer area css 
 ---------------------------------------------------------------------------- */
-
 .footer-area .row {
     flex-direction: column;
     justify-content: center;
@@ -299,4 +390,86 @@ main {
     color: #000;
     line-height: 24px;
     margin-bottom: 63px;
+}
+
+/* -------------------------------------------------------------------------
+                                responsive css 
+---------------------------------------------------------------------------- */
+@media only screen and (max-width: 991px) {
+    .main-menu li {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-menu {
+        display: none;
+    }
+    .menu-bar {
+        display: block;
+    }
+    .col-2 {
+        width: 100%;
+    }
+    .banner-content {
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+    }
+    .banner-content__title {
+        font-size: 45px;
+        line-height: 75px;
+    }
+    .banner-img {
+        margin-top: 50px;
+    }
+    .player-area {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 70px;
+    }
+    .player-content__title {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .highlights-area {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .highlights-content {
+        max-width: 580px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+    h2 {
+        font-size: 34px;
+    }
+    .video-area {
+        margin: 20px 0 50px;
+    }
+    .match-schedule {
+        margin-bottom: 0;
+    }
+    .footer-logo img {
+        max-width: 325px;
+    }
+    .copyright {
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 688px) {
+    .player-area {
+        grid-template-columns: 1fr;
+    }
+    .table-container {
+        overflow-x: scroll;
+    }
+    .table-container > table {
+        width: 600px;
+    }
 }
