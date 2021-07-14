@@ -1,6 +1,5 @@
-# Football Figma Template
+# About Football Figma Template
 
-## Description
 1. Responsive for all devices
 2. Banner Swing Animation using CSS3
 3. Responsive Menu
