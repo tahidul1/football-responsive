@@ -66,7 +66,7 @@ body {
 }
 
 main {
-    
+    margin: 70px 0;
 }
 
 
@@ -75,9 +75,26 @@ main {
 ---------------------------------------------------------------------------- */
 .container {
     max-width: 1163px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.container-inner {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-2 {
+    flex: 0 0 auto;
+    width: 50%;
 }
 
 .btn {
@@ -85,7 +102,6 @@ main {
     color: #fff;
     padding: 10px 24px;
     width: 123px;
-    height: 44px;
     background: #E02C6D;
     align-items: center;
     justify-content: center;
@@ -93,14 +109,22 @@ main {
 
 .btn:hover {
     color: #ccc;
-    transition: 0.3s;
+    transition: 0.3s ease-in;
+}
+
+.btn--arrow i{
+    margin-left: 8px;
 }
 
 /* -------------------------------------------------------------------------
                                 header area css 
 ---------------------------------------------------------------------------- */
-header.header-area {
-    background-color: #2D25A0;
+.header-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 42px;
 }
 
 /* -------- main menu css-------- */
@@ -128,10 +152,151 @@ header.header-area {
 
 .main-menu li a:hover {
     color: #ccc;
-    transition: 0.3s;
+    transition: 0.3s ease-in;
 }
 
 .menu-area .btn i {
     margin-right: 8px;
 }
 
+/* -------------------------------------------------------------------------
+                                banner area css 
+---------------------------------------------------------------------------- */
+
+.banner-area {
+    background: #2D25A0;
+    padding-top: 135px;
+    padding-bottom: 85px;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 485px;
+    height: 100%;
+}
+
+.banner-content__title {
+    margin-bottom: 27px;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-img img {
+    display: flex;
+    object-fit: contain;
+    height: 100%;
+}
+
+/* -------------------------------------------------------------------------
+                                player area css 
+---------------------------------------------------------------------------- */
+.player-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 28px;
+    grid-row-gap: 27px;
+    margin-bottom: 165px;
+}
+
+.palyer {
+    padding: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+.player-thumbnail {
+    margin-bottom: 16px;
+}
+
+.player-thumbnail img {
+    display: block;
+}
+
+.player-content__title {
+    margin-bottom: 10px;
+}
+
+.player-content__text {
+    margin-bottom: 18px;
+}
+
+/* -------------------------------------------------------------------------
+                                highlighhts area css 
+---------------------------------------------------------------------------- */
+.highlights-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 66px;
+    align-items: center;
+    margin-bottom: 88px;
+}
+
+.highlights-content {
+    max-width: 469px;
+}
+
+.highlidhts-content__title {
+    margin-bottom: 8px;
+}
+
+.highlidhts-content__text {
+    margin-bottom: 24px;
+    line-height: 28px;
+}
+
+.highlights-thumbnail img {
+    display: block;
+}
+
+/* -------------------------------------------------------------------------
+                                footer area css 
+---------------------------------------------------------------------------- */
+
+.footer-area .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    display: block;
+    max-width: 485px;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    color: #969BAB;
+    background: lightgray;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    margin: 0 7px;
+}
+
+.social-icons a:hover {
+    color: lightgray;
+    background: #969BAB;
+    transition: 0.3s ease-in;
+}
+
+.copyright {
+    font-size: 18px;
+    color: #000;
+    line-height: 24px;
+    margin-bottom: 63px;
+}
