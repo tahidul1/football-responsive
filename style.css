@@ -70,12 +70,68 @@ main {
 }
 
 
-/* ------------------------------
-        utilities css 
---------------------------------- */
+/* -------------------------------------------------------------------------
+                                utilities css 
+---------------------------------------------------------------------------- */
 .container {
     max-width: 1163px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.btn {
+    display: flex;
+    color: #fff;
+    padding: 10px 24px;
+    width: 123px;
+    height: 44px;
+    background: #E02C6D;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    color: #ccc;
+    transition: 0.3s;
+}
+
+/* -------------------------------------------------------------------------
+                                header area css 
+---------------------------------------------------------------------------- */
+header.header-area {
+    background-color: #2D25A0;
+}
+
+/* -------- main menu css-------- */
+.menu-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-menu {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu li {
+    margin-right: 36px;
+}
+
+.main-menu li a {
+    color: #fff;
+    line-height: 24px;
+    display: inline-block;
+}
+
+.main-menu li a:hover {
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.menu-area .btn i {
+    margin-right: 8px;
+}
+
